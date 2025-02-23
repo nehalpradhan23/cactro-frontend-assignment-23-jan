@@ -58,7 +58,7 @@ const BottomCards = () => {
     <div className="flex w-full flex-col">
       {/* heading =========================== */}
       <div className="flex gap-4 items-center">
-        <span className="text-2xl font-semibold">Budget status</span>
+        <span className="text-3xl font-semibold">Budget status</span>
         <div className="flex gap-4">
           {headingData?.map((item, index) => (
             <div
@@ -74,7 +74,7 @@ const BottomCards = () => {
         </div>
       </div>
       {/* cards =======================================s= */}
-      <div className="flex gap-4 mt-4">
+      <div className="flex gap-4 mt-4 justify-between">
         {cardData?.map((item, index) => (
           <div
             className="bg-white shadow-md p-4 rounded-md w-[280px] flex flex-col gap-2"

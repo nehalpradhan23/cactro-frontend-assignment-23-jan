@@ -38,7 +38,7 @@ const TopCards = () => {
       {cardData?.map((item, index) => (
         <div
           className={`bg-white h-[120px] w-[160px] shadow-lg flex flex-col p-2 rounded-sm ${
-            index === 3 ? "bg-red-400" : ""
+            index === 3 ? "bg-red-300" : ""
           }`}
         >
           <span
