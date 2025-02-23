@@ -1,8 +1,10 @@
+"use client";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { LuCircleCheckBig } from "react-icons/lu";
 import { BsArrowRepeat } from "react-icons/bs";
 import { BiError } from "react-icons/bi";
 import { MdOutlinePeopleAlt } from "react-icons/md";
+import { useEffect, useState } from "react";
 
 const cardData = [
   {
@@ -33,6 +35,13 @@ const cardData = [
 ];
 
 const TopCards = () => {
+  const [isMounted, setisMounted] = useState(false);
+  useEffect(() => {
+    setisMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
   return (
     <div className="flex gap-8 flex-wrap justify-between">
       {cardData?.map((item, index) => (
